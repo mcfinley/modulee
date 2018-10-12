@@ -1,3 +1,7 @@
-module.exports = () => {
-  console.log('...');
+export const createPlugin = () => {
+  /* */
+};
+
+export default class {
+  /* */
 };
