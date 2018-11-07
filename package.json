@@ -1,11 +1,17 @@
 {
   "name": "modulee",
-  "version": "0.1.0",
-  "description": "",
-  "main": "dist/index.js",
+  "version": "1.0.0",
+  "description": "Simple plugin/module builder",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx babel src --out-dir .",
+    "clean": "ls -1 src | xargs rm"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "mcfinley",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "babel-preset-env": "^2.0.0-alpha.20"
+  }
 }
