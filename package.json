@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx babel src --out-dir .",
-    "clean": "ls -1 src | xargs rm"
+    "clean": "ls -1 src | xargs rm",
+    "prepublish": "npm run build",
+    "postpublish": "npm run clean"
   },
   "author": "mcfinley",
   "license": "MIT",
