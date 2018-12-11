@@ -9,6 +9,24 @@ export const createPlugin = (name, version, dependencies, f) => {
   return Plugin;
 };
 
+const compareVersion = function (versionA, versionB) {
+  const tokensA = versionA.split('.').map(token => parseInt(token, 10));
+  const tokensB = versionB.split('.').map(token => parseInt(token, 10));
+
+  let index = 0;
+  while (index < 3) {
+    const numberA = index < tokensA.length ? tokensA[index] : 0;
+    const numberB = index < tokensB.length ? tokensB[index] : 0;
+
+    if (numberA !== numberB) {
+      return numberA > numberB ? 1 : -1;
+    }
+
+    index++;
+  }
+
+  return 0;
+};
 
 /**
  * The main modulee bus
