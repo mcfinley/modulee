@@ -111,7 +111,7 @@ export default class {
    * all the listeners in parallel asynchronously
    */
   emitParallel (event, data) {
-    return Promise.all(this.list(event, false).map((l) => Promise.resolve(l.cb(data))));
+    return Promise.all(this.list(event).map((l) => Promise.resolve(l.cb(data))));
   }
 
   /**

@@ -1,6 +1,6 @@
 {
   "name": "modulee",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple plugin/module builder",
   "main": "index.js",
   "scripts": {
